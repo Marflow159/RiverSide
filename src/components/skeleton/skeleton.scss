@@ -1,0 +1,21 @@
+.skeleton {
+    width: 178px;
+    height: 238px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    border: 1px solid #525252;
+    border-radius: 16px;
+    gap: 15px;
+    padding: 10px;
+
+    .skeleton__1 {
+        position: absolute;
+        top: -36px
+    }
+}

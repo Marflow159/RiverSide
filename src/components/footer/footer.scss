@@ -1,0 +1,36 @@
+.footer {
+    width: 100px;
+    height: 100vh;
+
+    background-color: #1F1D2B;
+    border-radius: 16px 0 0 16px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    // position: sticky;
+    // right: 0;
+    // top: 0;
+
+    button {
+        margin-top: 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        outline: none;
+        border: none;
+
+        background: none;
+    }
+}
+
+.footerActive{
+    display: flex;
+}
+
+.footerNoActive{
+    display: none;
+}

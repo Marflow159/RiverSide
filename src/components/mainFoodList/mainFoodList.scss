@@ -1,0 +1,29 @@
+.mainFoodList {
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: scroll;
+
+    h2{
+        margin-top: 25px;
+    }
+}
+
+.foodList {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: 70px;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 75px;
+
+}
+
+.not_found {
+    margin-top: 25px;
+}
+
+.mainFoodList::-webkit-scrollbar {
+    display: none;
+}

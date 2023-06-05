@@ -1,0 +1,133 @@
+.buyForm {
+    width: 550px;
+    height: 100vh;
+
+    background-color: #1F1D2B;
+    border-radius: 16px 0 0 16px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 25px;
+
+    // position: sticky;
+    // top: 0;
+    // right: 0;
+    
+    button {
+        outline: none;
+        border: none;
+        background: none;
+    }
+}
+
+.formLine {
+    margin: 25px 0 10px 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #393C49;
+
+
+}
+
+.formik {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+
+    span {
+        color: red;
+    }
+
+    label {
+        margin-left: 5px;
+        font-size: 16px;
+    }
+
+    &__margins {
+        width: 100%;
+        margin-top: 5px;
+
+        &>input {
+            width: 100%;
+            height: 45px;
+
+            box-sizing: border-box;
+
+            background: #2D303E;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            margin-top: 5px;
+            padding-left: 5px;
+        }
+    }
+
+    &__house {
+        display: flex;
+        flex-direction: row;
+
+        column-gap: 10px;
+        margin-top: 5px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+
+            width: 100%;
+            height: 45px;
+            box-sizing: border-box;
+
+            background: #2D303E;
+
+            border-radius: 8px;
+
+            margin-top: 5px;
+            padding-left: 5px;
+
+        }
+    }
+
+    &__ordersDishes {
+        width: 100%;
+        height: 150px;
+
+        border: 1px solid #393C49;
+        border-radius: 8px;
+
+        margin: 5px 0 5px 0;
+    }
+
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            width: 170px;
+            height: 45px;
+            background: #EA736D;
+            box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+            border-radius: 8px;
+        }
+    }
+}
+
+.errorBorder {
+    border: 1px solid red
+}
+
+.notErrorBorder {
+    border: 1px solid #393C49;
+}

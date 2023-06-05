@@ -1,0 +1,31 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  color:white;
+}
+
+h1{
+  font-size: 35px;
+}
+
+button{
+  cursor: pointer;
+}
+
+.mainBgFooter{
+
+  width: calc(100% - 250px);
+  min-height: 100vh;
+
+  display: flex;  
+  flex-direction: column;
+}
+
+.mainBgForm{
+  width: calc(100% - 700px);
+  min-height: 100vh;
+
+  display: flex;  
+  flex-direction: column;
+}

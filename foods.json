@@ -1,0 +1,145 @@
+{
+    "foods": [
+        {
+            "id": "spicySea",
+            "name": "Spicy Seasoned Seafood Noodles",
+            "type": "HotDishes",
+            "price": "2.29",
+            "img": "image/hotDishes/spicySea.png"
+        },
+        {
+            "id": "saltedPasta",
+            "name": "Salted Pasta With Mushroom Sauce",
+            "type": "HotDishes",
+            "price": "2.69",
+            "img": "image/hotDishes/saltedPasta.png"
+        },
+        {
+            "id": "beefDump",
+            "name": "Beef Dumpling In Hot And Sour Soup",
+            "type": "HotDishes",
+            "price": "2.99",
+            "img": "image/hotDishes/beefDump.png"
+        },
+        {
+            "id": "healthyNoob",
+            "name": "Healthy Noodle With Spinach Leaf",
+            "type": "HotDishes",
+            "price": "3.29",
+            "img": "image/hotDishes/healthyNood.png"
+        },
+        {
+            "id": "spicyInst",
+            "name": "Spicy Instant Moodle With Special Omelette",
+            "type": "HotDishes",
+            "price": "3.59",
+            "img": "image/hotDishes/spicyInst.png"
+        },
+        {
+            "id": "aranGoyo",
+            "name": "Aran Goyoaga’s Niçoise Salad",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/aranGoyo.png"
+        },
+        {
+            "id": "coldLemon",
+            "name": "Cold Lemon Zoodles",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/coldLemon.png"
+        },
+        {
+            "id": "coldSesame",
+            "name": "Cold Sesame Cucumber Noodles",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/coldSesame.png"
+        },
+        {
+            "id": "yellowTomato",
+            "name": "Yellow Tomato Gazpacho",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/yellowTomato.png"
+        },
+        {
+            "id": "honeyMiso",
+            "name": "Honey-miso Summer Salad Bowls",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/honeyMiso.png"
+        },
+        {
+            "id": "kelp",
+            "name": "Kelp And Zucchini Noodle Pad Thai",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/kelp.png"
+        },
+        {
+            "id": "quinoaAndShaved",
+            "name": "Quinoa And Shaved Carrot Salad",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/quinoaAndShaved.png"
+        },
+        {
+            "id": "shreddedThai",
+            "name": "Shredded Thai Salad With Avocado",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/shreddedThai.png"
+        },
+        {
+            "id": "sobaNoodle",
+            "name": "Soba Noodle Salad With Strawberries",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/sobaNoodle.png"
+        },
+        {
+            "id": "spiralizedSushi",
+            "name": "Spiralized Sushi Bowl",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/spiralizedSushi.png"
+        },
+        {
+            "id": "theUltimate",
+            "name": "The Ultimate Quinoa-avocado Bowl",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/theUltimate.png"
+        },
+        {
+            "id": "watermelonPoke",
+            "name": "Watermelon Poke Bowls",
+            "type": "ColdDishes",
+            "price": "2.29",
+            "img": "image/coldDishes/watermelonPoke.png"
+        }
+    ],
+    "filters": [
+        {
+            "id": "HotDishes",
+            "name": "HotDishes",
+            "label": "Hot Dishes"
+        },
+        {
+            "id": "ColdDishes",
+            "name": "ColdDishes",
+            "label": "Cold Dishes"
+        },
+        {
+            "id": "Soup",
+            "name": "Soup",
+            "label": "Soup"
+        },
+        {
+            "id": "Dessert",
+            "name": "Dessert",
+            "label": "Dessert"
+        }
+    ]
+}
