@@ -1,6 +1,7 @@
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup'
 
+import OrderDishes from '../orderDishes/OrderDishes';
 import { useDispatch, useSelector } from 'react-redux';
 
 import './buyForm.scss'
@@ -9,41 +10,39 @@ import line from '../resources/img/navImg/Line.png'
 const BuyForm = () => {
 
     const { orderDishes } = useSelector(state => state.foods);
-    const dispatch = useDispatch();
 
-    // const showOrderDishes = (arr) => {
-    //     if (arr.length === 0) {
-    //         return <h5>Not dishes yet</h5>
-    //     } else if (arr.length > 0) {
+    const swapFooter = () => {
+        localStorage.setItem("footerOn", false)
+        const footerOn = localStorage.getItem("footerOn")
+        if (footerOn === `false`) {
+            document.querySelector(`.mainBgForm`).className = 'mainBgFooter'
+            document.querySelector(`.footer`).className = `footer footerActive`
+            document.querySelector(`.buyForm`).className = `buyForm footerNoActive`
+        }
+    }
 
-    //         return arr.map(({ id, name, price, img }) => {
-    //             return (
-    //                 <div key={id}>
-    //                     <div>
-    //                         <img src={img} alt="" />
-    //                     </div>
-    //                     <div>
-    //                         <p>{name}</p>
-    //                         <p>{price}</p>
-    //                     </div>
-    //                 </div>
-    //             )
-    //         })
+    const sumAll = () => {
+        let sum = 0;
 
-    //     }
-    // }
+        orderDishes.map(({ count, price }) => {
+            sum += count * price
+        })
 
+        return sum.toFixed(2);
+    }
 
-    const swapForm = () => {
-        document.querySelector(`.mainBgForm`).className = 'mainBgFooter'
-        document.querySelector(`.footer`).className = `footer footerActive`
-        document.querySelector(`.buyForm`).className = `buyForm footerNoActive`
+    const footerOn = localStorage.getItem("footerOn");
+    let clazz = `buyForm footerNoActive`;
+    if(footerOn === `true`){
+        clazz = 'buyForm footerActive'
+    } else if(footerOn === `false`){
+        clazz = 'buyForm footerNoActive'
     }
 
     return (
-        <div className='buyForm footerNoActive'>
+        <div className={clazz}>
             <div>
-                <button onClick={() => swapForm()}><img src={line} alt="" /></button>
+                <button className='butNone' onClick={() => swapFooter()}><img src={line} alt="" /></button>
             </div>
             <div className='formLine'>
                 <h2>Checkout</h2>
@@ -62,7 +61,7 @@ const BuyForm = () => {
                     name: Yup.string()
                         .min(2)
                         .required(),
-                    phone: Yup.string()
+                    phone: Yup.number()
                         .required(),
                     address: Yup.string()
                         .min(2)
@@ -155,11 +154,12 @@ const BuyForm = () => {
                         </div>
 
                         <div className='formik__ordersDishes'>
-                            {/* {showOrderDishes(orderDishes)} */}
+                            <OrderDishes />
                         </div>
 
                         <div className='formik__button'>
-                            <button type='submit'>Order</button>
+                            <div className='formik__button__sub'><span>Sub total</span> <span>${sumAll()}</span></div>
+                            <button className='butNone' type='submit'>Order</button>
                         </div>
 
                     </Form>)}

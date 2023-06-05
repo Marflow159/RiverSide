@@ -25,52 +25,48 @@ const MainFoodList = () => {
         }
     }, [mainFilteredFoods, activeFilter])
 
-    const onAddToOrder = (ids, propss) => {
+    const onAddToOrder = (addId, addProps) => {
+
+        const allOrders = {
+            all: []
+        }
+
+        let newOrders = [];
+        let numberOfOrders = 0;
 
         if (orderDishes.length === 0) {
-            dispatch(orderDishesChanged([{
-                id: ids,
-                ...propss,
-                count: 1
-            }]))
+            newOrders.push({
+                id: addId,
+                ...addProps
+            })
+            
+            allOrders.all = newOrders
+            localStorage.setItem('allOrders', JSON.stringify(allOrders))
+            dispatch(orderDishesChanged(newOrders))
         } else {
-            const elem = []
-            orderDishes.map(({ id, count, ...props }) => {
-                if (id === ids) {
-                    elem.push({
+            orderDishes.map((item, i) => {
+                const { id, count, ...props } = item
+                if (id === addId) {
+                    newOrders.push({
                         id,
                         ...props,
                         count: count + 1
                     })
-                } else if (ids !== id) {
-                    elem.push({
-                        id,
-                        ...props,
-                        count
-                    })
+                } else {
+                    newOrders.push(item)
+                    numberOfOrders += 1
                 }
             })
-            dispatch(orderDishesChanged(elem))
+            if (numberOfOrders === orderDishes.length) {
+                newOrders.push({
+                    id: addId,
+                    ...addProps
+                })
+            }
+            allOrders.all = newOrders
+            localStorage.setItem('allOrders', JSON.stringify(allOrders))
+            dispatch(orderDishesChanged(newOrders))
         }
-
-
-        // if (orderDishes.length === 0) {
-        //     dispatch(orderDishesChanged([{
-        //         id: ids,
-        //         ...propss,
-        //         count: 1
-        //     }]))
-        // } else {
-        //     orderDishes.map(({ id, count, ...props }) => {
-
-        //         orderDishes.map(({ id, count, ...props }) => {
-                    
-        //         })
-
-        //     })
-        // }
-
-
     }
 
     const renderFoodsList = (arr) => {
