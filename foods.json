@@ -5,119 +5,137 @@
             "name": "Spicy Seasoned Seafood Noodles",
             "type": "HotDishes",
             "price": "2.29",
-            "img": "image/hotDishes/spicySea.png"
+            "img": "image/hotDishes/spicySea.png",
+            "count": 1
         },
         {
             "id": "saltedPasta",
             "name": "Salted Pasta With Mushroom Sauce",
             "type": "HotDishes",
             "price": "2.69",
-            "img": "image/hotDishes/saltedPasta.png"
+            "img": "image/hotDishes/saltedPasta.png",
+            "count": 1
+            
         },
         {
             "id": "beefDump",
             "name": "Beef Dumpling In Hot And Sour Soup",
             "type": "HotDishes",
             "price": "2.99",
-            "img": "image/hotDishes/beefDump.png"
+            "img": "image/hotDishes/beefDump.png",
+            "count": 1
         },
         {
             "id": "healthyNoob",
             "name": "Healthy Noodle With Spinach Leaf",
             "type": "HotDishes",
             "price": "3.29",
-            "img": "image/hotDishes/healthyNood.png"
+            "img": "image/hotDishes/healthyNood.png",
+            "count": 1
         },
         {
             "id": "spicyInst",
             "name": "Spicy Instant Moodle With Special Omelette",
             "type": "HotDishes",
             "price": "3.59",
-            "img": "image/hotDishes/spicyInst.png"
+            "img": "image/hotDishes/spicyInst.png",
+            "count": 1
         },
         {
             "id": "aranGoyo",
-            "name": "Aran Goyoaga’s Niçoise Salad",
+            "name": "Aran Goyoagas Niçoise Salad",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/aranGoyo.png"
+            "price": "3.29",
+            "img": "image/coldDishes/aranGoyo.png",
+            "count": 1
         },
         {
             "id": "coldLemon",
             "name": "Cold Lemon Zoodles",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/coldLemon.png"
+            "price": "2.59",
+            "img": "image/coldDishes/coldLemon.png",
+            "count": 1
         },
         {
             "id": "coldSesame",
             "name": "Cold Sesame Cucumber Noodles",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/coldSesame.png"
+            "price": "2.59",
+            "img": "image/coldDishes/coldSesame.png",
+            "count": 1
         },
         {
             "id": "yellowTomato",
             "name": "Yellow Tomato Gazpacho",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/yellowTomato.png"
+            "price": "3.29",
+            "img": "image/coldDishes/yellowTomato.png",
+            "count": 1
         },
         {
             "id": "honeyMiso",
             "name": "Honey-miso Summer Salad Bowls",
             "type": "ColdDishes",
             "price": "2.29",
-            "img": "image/coldDishes/honeyMiso.png"
+            "img": "image/coldDishes/honeyMiso.png",
+            "count": 1
         },
         {
             "id": "kelp",
             "name": "Kelp And Zucchini Noodle Pad Thai",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/kelp.png"
+            "price": "3.59",
+            "img": "image/coldDishes/kelp.png",
+            "count": 1
         },
         {
             "id": "quinoaAndShaved",
             "name": "Quinoa And Shaved Carrot Salad",
             "type": "ColdDishes",
             "price": "2.29",
-            "img": "image/coldDishes/quinoaAndShaved.png"
+            "img": "image/coldDishes/quinoaAndShaved.png",
+            "count": 1
         },
         {
             "id": "shreddedThai",
             "name": "Shredded Thai Salad With Avocado",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/shreddedThai.png"
+            "price": "3.29",
+            "img": "image/coldDishes/shreddedThai.png",
+            "count": 1
         },
         {
             "id": "sobaNoodle",
             "name": "Soba Noodle Salad With Strawberries",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/sobaNoodle.png"
+            "price": "2.59",
+            "img": "image/coldDishes/sobaNoodle.png",
+            "count": 1
         },
         {
             "id": "spiralizedSushi",
             "name": "Spiralized Sushi Bowl",
             "type": "ColdDishes",
             "price": "2.29",
-            "img": "image/coldDishes/spiralizedSushi.png"
+            "img": "image/coldDishes/spiralizedSushi.png",
+            "count": 1
         },
         {
             "id": "theUltimate",
             "name": "The Ultimate Quinoa-avocado Bowl",
             "type": "ColdDishes",
             "price": "2.29",
-            "img": "image/coldDishes/theUltimate.png"
+            "img": "image/coldDishes/theUltimate.png",
+            "count": 1
         },
         {
             "id": "watermelonPoke",
             "name": "Watermelon Poke Bowls",
             "type": "ColdDishes",
-            "price": "2.29",
-            "img": "image/coldDishes/watermelonPoke.png"
+            "price": "3.59",
+            "img": "image/coldDishes/watermelonPoke.png",
+            "count": 1
         }
     ],
     "filters": [

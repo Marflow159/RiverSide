@@ -24,7 +24,7 @@ const foodsSlice = createSlice({
     reducers: {
         activeFoodsChanged: (state, action) => { state.activeFilter = action.payload },
         filteredFoodsChanged: (state, action) => { state.mainFilteredFoods = action.payload },
-        orderDishesChanged: (state, action) =>{state.orderDishes =  action.payload}
+        orderDishesChanged: (state, action) =>{state.orderDishes =  action.payload},
     },
 
     extraReducers: (buider) => {
@@ -52,5 +52,6 @@ export const {
     foodsFetchingError,
     activeFoodsChanged,
     filteredFoodsChanged,
-    orderDishesChanged
+    orderDishesChanged,
+
 } = actions;
