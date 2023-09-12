@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import foods from '../components/mainFoodList/foodsSlice'
+import orders from '../components/notificationOrders/ordersSlice'
 
 const stringMiddleware = ({ dispatch, getState }) => (next) => (action) => {
     if (typeof action === 'string') {
@@ -12,7 +13,8 @@ const stringMiddleware = ({ dispatch, getState }) => (next) => (action) => {
 
 const store = configureStore({
     reducer: {
-        foods
+        foods,
+        orders
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
     devTools: process.env.NODE_ENV !== 'production'

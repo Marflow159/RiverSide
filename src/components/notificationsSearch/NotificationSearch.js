@@ -3,10 +3,9 @@ import { filteredFoodsChanged } from '../mainFoodList/foodsSlice'
 import { selectAll } from '../mainFoodList/foodsSlice'
 import store from '../../store/store'
 
-import './mainSearch.scss'
 import search from '../resources/img/filterImg/search.png'
 
-const MainSearch = () => {
+const NotificationsSearch = () => {
     let date = new Date().toGMTString().slice(0, 16)
 
     const dispatch = useDispatch();
@@ -30,27 +29,10 @@ const MainSearch = () => {
     }
 
     return (
+        <>
         <div className="mainSearch">
             <div>
-                {/* <div className='mainSearch__h1'>
-                    <h1>Riverside</h1>
-                    <h1>Riverside</h1>
-                </div> */}
-                <div class="wrapper nine">
-                    <div>
-                        <h1 class="rotate">
-                            <span>R</span>
-                            <span>I</span>
-                            <span>V</span>
-                            <span>E</span>
-                            <span>R</span>
-                            <span>S</span>
-                            <span>I</span>
-                            <span>T</span>
-                            <span>E</span>
-                        </h1>
-                    </div>
-                </div>
+                <h1>Notification</h1>
                 <p>{`${date}`}</p>
             </div>
             <div>
@@ -58,6 +40,9 @@ const MainSearch = () => {
                 <input onChange={(e) => searchFood(foods, e.target.value)} placeholder='Search for food, coffe, etc..' type="text" />
             </div>
         </div>
+        <span className='lineDown'></span>
+        </>
+        
     )
 }
-export default MainSearch;
+export default NotificationsSearch;

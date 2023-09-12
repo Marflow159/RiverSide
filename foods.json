@@ -159,5 +159,19 @@
             "name": "Dessert",
             "label": "Dessert"
         }
+    ],
+    "orders": [
+        {
+            "id": "00001",
+            "menu": "Spicy seasoned seafood noodles",
+            "total": "20.56",
+            "status": "preparing"
+        },
+        {
+            "id": "00002",
+            "menu": "Spicy seasoned seafood noodles",
+            "total": "20.56",
+            "status": "complited"
+        }
     ]
 }

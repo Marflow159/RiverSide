@@ -16,7 +16,7 @@ export const fetchFoods = createAsyncThunk(
         const { request } = useHttp();
         return request("http://localhost:3001/foods")
     }
-)
+)   
 
 const foodsSlice = createSlice({
     name: 'foods',

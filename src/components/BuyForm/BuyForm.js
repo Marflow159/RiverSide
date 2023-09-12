@@ -17,7 +17,7 @@ const BuyForm = () => {
         if (footerOn === `false`) {
             document.querySelector(`.mainBgForm`).className = 'mainBgFooter'
             document.querySelector(`.footer`).className = `footer footerActive`
-            document.querySelector(`.buyForm`).className = `buyForm footerNoActive`
+            document.querySelector(`.buyForm`).className = `buyForm `
         }
     }
 
@@ -33,11 +33,12 @@ const BuyForm = () => {
 
     const footerOn = localStorage.getItem("footerOn");
     let clazz = `buyForm footerNoActive`;
-    if(footerOn === `true`){
+    if (footerOn === `true`) {
         clazz = 'buyForm footerActive'
-    } else if(footerOn === `false`){
-        clazz = 'buyForm footerNoActive'
+    } else if (footerOn === `false`) {
+        clazz = 'buyForm '
     }
+
 
     return (
         <div className={clazz}>
@@ -53,8 +54,6 @@ const BuyForm = () => {
                     phone: '',
                     address: '',
                     house: '',
-                    entrance: '',
-                    apartment: '',
                     note: ''
                 }}
                 validationSchema={Yup.object({
@@ -81,85 +80,65 @@ const BuyForm = () => {
                 {({ errors, touched }) => (
                     <Form className='formik'>
                         <div className='formik__margins'>
-                            <label htmlFor="name">Name <span>*</span></label>
                             <Field
-                                placeholder='Enter Your Name'
                                 id='name'
                                 name='name'
                                 type='text'
-                                className={errors.name && touched.name ? `errorBorder` : `notErrorBorder`} />
+                                className={errors.name && touched.name ? `errorBorder` : `notErrorBorder`}
+                                required />
+                            <label htmlFor="name">Name <span>*</span></label>
                         </div>
 
                         <div className='formik__margins'>
-                            <label htmlFor="phone">Phone number <span>*</span></label>
                             <Field
-                                placeholder='Enter Your Phone'
                                 id='phone'
                                 name='phone'
                                 type='text'
-                                className={errors.phone && touched.phone ? `errorBorder` : `notErrorBorder`} />
+                                className={errors.phone && touched.phone ? `errorBorder` : `notErrorBorder`}
+                                required />
+                            <label htmlFor="phone">Phone number <span>*</span></label>
                         </div >
 
                         <div className='formik__margins'>
-                            <label htmlFor="address">Address <span>*</span></label>
+
                             <Field
-                                placeholder='Enter Your Address'
                                 id='address'
                                 name='address'
                                 type='text'
-                                className={errors.address && touched.address ? `errorBorder` : `notErrorBorder`} />
+                                className={errors.address && touched.address ? `errorBorder` : `notErrorBorder`}
+                                required />
+                            <label htmlFor="address">Address <span>*</span></label>
                         </div>
 
 
-                        <div className='formik__house'>
-                            <div>
-                                <label htmlFor="house">House <span>*</span></label>
-                                <Field
-                                    placeholder='Enter Your House'
-                                    id='house'
-                                    name='house'
-                                    type='text'
-                                    className={errors.house && touched.house ? `errorBorder` : `notErrorBorder`} />
-                            </div>
-
-                            <div>
-                                <label htmlFor="entrance">Entrance</label>
-                                <Field
-                                    placeholder='Enter Your Entrance'
-                                    id='entrance'
-                                    name='entrance'
-                                    type='text'
-                                    className={errors.entrance && touched.entrance ? `errorBorder` : `notErrorBorder`} />
-                            </div>
-
-                            <div>
-                                <label htmlFor="apartment">Apartment</label>
-                                <Field
-                                    placeholder='Enter Your Apartment'
-                                    id='apartment'
-                                    name='apartment'
-                                    type='text'
-                                    className={errors.apartment && touched.apartment ? `errorBorder` : `notErrorBorder`} />
-                            </div>
+                        <div className='formik__margins'>
+                            <Field
+                                id='house'
+                                name='house'
+                                type='text'
+                                className={errors.house && touched.house ? `errorBorder` : `notErrorBorder`}
+                                required />
+                            <label htmlFor="house">House <span>*</span></label>
                         </div>
 
                         <div className='formik__margins'>
-                            <label htmlFor="note">Delivery Note</label>
                             <Field
-                                placeholder='Order Note'
                                 id='note'
                                 name='note'
                                 type='textarea'
-                                className={errors.note && touched.note ? `errorBorder` : `notErrorBorder`} />
+                                className={errors.note && touched.note ? `errorBorder` : `notErrorBorder`}
+                                required />
+                            <label htmlFor="note">Delivery Note</label>
                         </div>
 
                         <div className='formik__ordersDishes'>
-                            <OrderDishes />
+                                <OrderDishes />
+
                         </div>
 
                         <div className='formik__button'>
                             <div className='formik__button__sub'><span>Sub total</span> <span>${sumAll()}</span></div>
-                            <button className='butNone' type='submit'>Order</button>
+                            <button type='submit'>Order</button>
                         </div>
 
                     </Form>)}

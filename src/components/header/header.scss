@@ -47,6 +47,19 @@
 .noActiveBox{
     img:last-of-type{
         display: none;
+        box-shadow: 0 0 40px 40px #EA736D inset, 0 0 0 0 #EA736D;
+    }
+    img{
+        padding: 15px;
+    }
+    img:hover{
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 #EA736D inset, 0 0 10px 4px #EA736D;
+        transition: all 150ms ease-in-out;
+    }
+    img:active{
+        background: #EA736D;
+        transition: 0.1s;
     }
 }
 
@@ -58,9 +71,9 @@
         padding: 15px;
         background: #EA736D;
         border-radius: 8px;
-        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
     }
     img:first-of-type{
         display: none;
     }
+
 }

@@ -9,6 +9,7 @@ const OrderDishes = () => {
 
     const { orderDishes } = useSelector(state => state.foods);
     const dispatch = useDispatch();
+
     const allOrders = {
         all: []
     }
@@ -16,29 +17,33 @@ const OrderDishes = () => {
     useEffect(() => {
         const allOrders = localStorage.getItem('allOrders')
         const allOrd = JSON.parse(allOrders)
-        dispatch(orderDishesChanged(allOrd.all));
+        if (allOrd !== null) {
+            dispatch(orderDishesChanged(allOrd.all));
+        }
         // eslint-disable-next-line  
     }, [])
 
 
     const minusPlus = (newId, fun) => {
-        console.log(orderDishes);
 
         let newOrders = []
 
         orderDishes.map(item => {
+
             const { id, count, ...props } = item
+
             if (id === newId) {
+
                 if (fun === "minus") {
-                    if (count === 1) {
-                        newOrders.pop(item)
-                    } else {
+
+                    if (count !== 1) {
                         newOrders.push({
                             id,
                             ...props,
                             count: count - 1
                         })
                     }
+
                 } else if (fun === "plus") {
                     newOrders.push({
                         id,
@@ -50,8 +55,10 @@ const OrderDishes = () => {
                 newOrders.push(item)
             }
         })
+
         allOrders.all = newOrders
         localStorage.setItem('allOrders', JSON.stringify(allOrders))
+
         dispatch(orderDishesChanged(newOrders))
     }
 
@@ -68,14 +75,13 @@ const OrderDishes = () => {
                             <img src={img} alt="" />
                         </div>
                         <div className='order__p'>
-                            <p>{name.length > 25 ? name.slice(0, 25) + `...` : name}</p>
+                            <p>{name.length > 20 ? name.slice(0, 20) + `...` : name}</p>
                             <p>$ {(price * count).toFixed(2)}</p>
                             <div className='order__p__but'>
                                 <button type="button" onClick={e => minusPlus(id, `minus`)}>-</button>
                                 <p>{count}</p>
                                 <button type="button" onClick={e => minusPlus(id, `plus`)}>+</button>
                             </div>
-
                         </div>
                     </div>
                 )

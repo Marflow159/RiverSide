@@ -1,10 +1,8 @@
 .App {
   display: flex;
-  justify-content: space-between;
-
+  gap: 25px;
   width: 100%;
   min-height: 100vh;
   background: #252836;
   color: white;
 }
-

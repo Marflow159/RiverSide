@@ -1,41 +1,52 @@
-.order{
+.order {
     display: flex;
-    
+
     width: 90%;
     height: 45px;
 
     column-gap: 10px;
     margin-top: 4px;
-    &__img{
+
+    &__img {
         width: 45px;
         height: 45px;
 
-        img{
+        img {
             width: 100%;
         }
     }
 
-    &__p{
+    &__p {
         display: flex;
+        width: 340px;
         height: 100%;
 
         align-items: center;
         column-gap: 10px;
 
-        p:first-child{
-            width: 250px;
+        p:first-child {
+            width: 175px;
         }
 
-        &__but{
+        p:nth-of-type(2) {
+            text-align: start;
+            width: 75px;
+        }
+
+        &__but {
             display: flex;
-            
+
             column-gap: 10px;
 
-            button{
-               width: 20px;
-               height: 20px;
-               border: 1px solid #393C49;
-               border-radius: 8px;
+            button {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #393C49;
+                border-radius: 8px;
+            }
+            p:nth-of-type(1) {
+                text-align: center;
+                width: 20px;
             }
         }
 

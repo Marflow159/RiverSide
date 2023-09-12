@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SkeletonTheme } from 'react-loading-skeleton';
+
 import MainPage from '../pages/MainPage';
+import NotificationPage from '../pages/NotificationsPage';
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
@@ -16,6 +18,9 @@ function App() {
                     <Header />
                     <Routes>
                         <Route path='/' element={<MainPage />} />
+                    </Routes>
+                    <Routes>
+                        <Route path='/notification' element={<NotificationPage/>}/>
                     </Routes>
                     <Footer />
                     <BuyForm />
