@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
+import basket from '../resources/img/navImg/Cart.png'
+import logo from '../resources/img/navImg/logo.png'
+
 import './footer.scss'
-
-import basket from '../resources/img/navImg/basket.png'
-
 const Footer = () => {
 
     const swapFooter = () => {
@@ -14,16 +16,34 @@ const Footer = () => {
         }
     }
 
+
     const footerOn = localStorage.getItem("footerOn");
     let clazz = `footer footerActive`;
-    if(footerOn === `true`){
+    if (footerOn === `true`) {
         clazz = 'footer footerNoActive'
-    } else if(footerOn === `false`){
+    } else if (footerOn === `false`) {
         clazz = 'footer footerActive'
+    }
+
+    const activeBurger = () => {
+        let burgerBtn = document.querySelector('.burger');
+        let burgerMenu = document.querySelector('.header')
+
+        burgerBtn.classList.toggle('active')
+        burgerMenu.classList.toggle('active')
+
     }
 
     return (
         <footer className={clazz}>
+            <button onClick={() => activeBurger()} className='burger'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <NavLink to='/' className="burgerHome">
+                <img src={logo} alt="" />
+            </NavLink>
             <button onClick={() => swapFooter()}><img src={basket} alt="basket" /></button>
         </footer>
     )

@@ -30,16 +30,15 @@ const MainFoodList = () => {
         const allOrders = {
             all: []
         }
-
         let newOrders = [];
         let numberOfOrders = 0;
-
+        
         if (orderDishes.length === 0) {
             newOrders.push({
                 id: addId,
                 ...addProps
             })
-            
+
             allOrders.all = newOrders
             localStorage.setItem('allOrders', JSON.stringify(allOrders))
             dispatch(orderDishesChanged(newOrders))
@@ -66,6 +65,7 @@ const MainFoodList = () => {
             allOrders.all = newOrders
             localStorage.setItem('allOrders', JSON.stringify(allOrders))
             dispatch(orderDishesChanged(newOrders))
+
         }
     }
 

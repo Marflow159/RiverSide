@@ -1,0 +1,203 @@
+@media(max-width: 1200px) {
+    .mainBgForm {
+        width: calc(100% - 250px);
+    }
+}
+
+@media(max-width: 767px) {
+    .rotate {
+        span {
+            font-size: 30px;
+        }
+    }
+
+    .App {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header {
+        width: 100%;
+        height: calc(100vh - 54px);
+        transition: all 0.3s ease;
+        border-radius: 16px 16px 0 0;
+
+        position: fixed;
+        z-index: 2;
+        left: -100%;
+        margin-top: 54px;
+
+        &__nav {
+            margin: 0;
+            gap: 0;
+
+            span {
+                display: none;
+            }
+
+            a:nth-of-type(1) {
+                display: none;
+            }
+        }
+    }
+
+    .mainBgFooter {
+        width: calc(100% - 20px);
+        min-height: 100vh;
+        padding: 54px 10px 0 10px;
+    }
+
+    .mainBgForm {
+        width: calc(100% - 20px);
+        padding: 54px 10px 0 10px;
+    }
+
+    .mainFoodList {
+        height: 100%
+    }
+
+    .mainSearch {
+        height: 70px;
+    }
+
+    .foodList {
+        justify-content: center;
+    }
+
+    .footer {
+        position: fixed;
+        top: 0;
+
+        width: 100%;
+        height: 54px;
+
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 16px 16px;
+
+        button {
+            margin: 0;
+        }
+    }
+
+    .footerNoActive {
+        display: flex;
+    }
+
+    .buyForm {
+        width: 100%;
+    }
+
+    .burgerHome {
+        display: flex;
+
+        width: 35px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px 0 30px;
+
+        position: relative;
+
+
+        span {
+            width: 20px;
+            height: 2px;
+
+            border-radius: 10px;
+
+            background-color: #EA736D;
+
+            transition: all 0.5s;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: 3;
+        }
+
+        span:nth-of-type(1) {
+            top: calc(50% - 5px);
+        }
+
+        span:nth-of-type(3) {
+            top: calc(50% + 5px);
+        }
+
+    }
+
+    .burger.active span:nth-of-type(1) {
+        display: none;
+    }
+
+    .burger.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    .burger.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+    }
+
+    .header.active {
+        left: 0;
+    }
+
+}
+
+
+@media(max-width: 424px) {
+    h2{
+        font-size: 20px;
+    }
+    .rotate {
+        span {
+            font-size: 24px;
+        }
+    }
+
+    .mainSearch div:nth-of-type(2) {
+        width: 150px;
+        height: 40px;
+        input{
+            width: 100px;
+        }
+    }
+
+    .mainFilter {
+        button {
+            font-size: 11px;
+        }
+    }
+
+    .hot-dishes {
+        top: 28px;
+        width: 57px;
+        left: 0;
+    }
+
+    .cold-dishes {
+        top: 28px;
+        width: 61px;
+        left: 91px;
+    }
+
+    .soup-dishes {
+        width: 27px;
+        left: 187px;
+    }
+
+    .desserts-dishes {
+        width: 46px;
+        left: 249px;
+    }
+}

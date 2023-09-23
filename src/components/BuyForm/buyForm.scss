@@ -3,9 +3,12 @@
     height: 100vh;
 
     position: fixed;
-    right: -550px;
+    right: -100%;
+    z-index: 3;
+
     transition: 0.3s;
     background-color: #1F1D2B;
+
     border-radius: 16px 0 0 16px;
 
     flex-direction: column;
@@ -41,13 +44,14 @@
 
 .formik {
     display: flex;
-    
+
     flex-wrap: wrap;
 
     height: min-content;
 
     gap: 16px;
     padding: 3px;
+
     span {
         color: red;
     }
@@ -58,12 +62,14 @@
     }
 
     &__margins {
+       
         position: relative;
-
+        width: 45%;
         height: min-content;
 
-        &>input {
-            font: inherit;
+        &>input { 
+            box-sizing: border-box;
+            width: 100%;
             color: white;
             padding: 10px;
             border: none;
@@ -168,9 +174,21 @@
         button {
             width: 170px;
             height: 45px;
-            background: #EA736D;
-            box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
             border-radius: 8px;
+
+            border: 2px solid #EA736D;
+            color: #EA736D;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px 0 #EA736D inset, 0 0 10px 1px #EA736D;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:active {
+            background: #EA736D;
+            transition: 0.1s;
+            color: white;
         }
     }
 }
@@ -183,20 +201,20 @@
     outline: 2px solid #393C49;
 }
 
-.example-enter{
+.example-enter {
     opacity: 0.01;
 }
 
 .example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
 
-.footerActive{
+.footerActive {
     display: flex;
     right: 0;
 }
 
-.footerNoActive{
+.footerNoActive {
     display: none;
 }

@@ -42,6 +42,9 @@ const OrderDishes = () => {
                             ...props,
                             count: count - 1
                         })
+                    } else {
+                        let order = document.querySelector(`[ data-id=${id}]`)
+                        order.classList = 'order'
                     }
 
                 } else if (fun === "plus") {
@@ -56,25 +59,45 @@ const OrderDishes = () => {
             }
         })
 
-        allOrders.all = newOrders
-        localStorage.setItem('allOrders', JSON.stringify(allOrders))
+        if (newOrders.length !== orderDishes.length) {
+            setTimeout(() => {
+                allOrders.all = newOrders
+                localStorage.setItem('allOrders', JSON.stringify(allOrders))
 
-        dispatch(orderDishesChanged(newOrders))
+                dispatch(orderDishesChanged(newOrders))
+
+            }, 400)
+        } else {
+            allOrders.all = newOrders
+            localStorage.setItem('allOrders', JSON.stringify(allOrders))
+
+            dispatch(orderDishesChanged(newOrders))
+        }
     }
 
+
     const showOrderDishes = (arr) => {
+
+        setTimeout(() => {
+            let orders = document.querySelectorAll('.order')
+
+            orders.forEach(order => {
+                order.classList = 'order order__left'
+            })
+        }, 300)
+
         if (arr.length === 0) {
-            return <h5>Not dishes yet</h5>
+            return <h5 className='notYet'>Not dishes yet</h5>
         } else if (arr.length > 0) {
 
             return arr.map((item) => {
                 const { id, name, price, img, count } = item
                 return (
-                    <div key={id} className='order'>
+                    <div key={id} className='order' data-id={id}>
                         <div className='order__img'>
                             <img src={img} alt="" />
                         </div>
-                        <div className='order__p'>
+                        <div className='order__p '>
                             <p>{name.length > 20 ? name.slice(0, 20) + `...` : name}</p>
                             <p>$ {(price * count).toFixed(2)}</p>
                             <div className='order__p__but'>

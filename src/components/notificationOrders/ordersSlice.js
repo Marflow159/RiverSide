@@ -12,7 +12,7 @@ export const fetchOrders = createAsyncThunk(
     `orders/fetchOrders`,
     () => {
         const { request } = useHttp();
-        return request("http://localhost:3001/orders")
+        return request("https://riversite-bba63-default-rtdb.firebaseio.com/orders.json")
     }
 )
 

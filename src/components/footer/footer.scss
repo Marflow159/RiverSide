@@ -1,3 +1,12 @@
+
+.burger{
+    display: none;
+}
+
+.burgerHome{
+    display: none;
+}
+
 .footer {
     width: 100px;
     height: 100vh;
@@ -20,5 +29,20 @@
         border: none;
 
         background: none;
+
+        img {
+            padding: 15px;
+        }
+
+        img:hover {
+            border-radius: 8px;
+            box-shadow: 0 0 10px 0 #EA736D inset, 0 0 10px 4px #EA736D;
+            transition: all 150ms ease-in-out;
+        }
+
+        img:active {
+            background: #EA736D;
+            transition: 0.1s;
+        }
     }
 }

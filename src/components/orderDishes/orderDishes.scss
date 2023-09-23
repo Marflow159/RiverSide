@@ -1,3 +1,6 @@
+.notYet{
+        margin-top: 70px;
+}
 .order {
     display: flex;
 
@@ -7,6 +10,16 @@
     column-gap: 10px;
     margin-top: 4px;
 
+    position: relative;
+
+    
+    transition: all 0.3s ease;
+    left: -500px;
+
+    &__left{
+        left: 0;
+    }
+    
     &__img {
         width: 45px;
         height: 45px;

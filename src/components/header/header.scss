@@ -9,10 +9,7 @@
     align-items: flex-start;
     justify-content: center;
 
-    // position: sticky;
-    // left: 0;
-    // top: 0;
-    
+
     &__nav {
         width: 50px;
         margin-top: 25px;
@@ -24,56 +21,97 @@
 
         row-gap: 15px;
 
-        a{
+        position: relative;
+
+        span {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: #252836;
+            border-radius: 12px 0px 0px 12px;
+            box-shadow: 15px 0 #252836;
+
+            transition: 0.3s ease;
+            z-index: 0;
+        }
+
+        a {
             width: 75px;
             height: 75px;
 
             display: flex;
             align-items: center;
             justify-content: center;
+
+
+            img {
+
+                z-index: 1;
+            }
         }
 
-        a:nth-of-type(1){
+        a:nth-of-type(1) {
             width: 100%;
             height: 100%;
         }
 
-        a:nth-of-type(2){
+        a:nth-of-type(2) {
             margin: 10px 0;
         }
     }
 }
 
-.noActiveBox{
-    img:last-of-type{
+.noActiveBox {
+    img:last-of-type {
         display: none;
         box-shadow: 0 0 40px 40px #EA736D inset, 0 0 0 0 #EA736D;
     }
-    img{
+
+    img {
         padding: 15px;
     }
-    img:hover{
+
+    img:hover {
         border-radius: 8px;
         box-shadow: 0 0 10px 0 #EA736D inset, 0 0 10px 4px #EA736D;
         transition: all 150ms ease-in-out;
     }
-    img:active{
+
+    img:active {
         background: #EA736D;
         transition: 0.1s;
     }
 }
 
-.activeBox {
-    background: #252836;
-    border-radius: 12px 0px 0px 12px;
-    box-shadow: 15px 0 #252836;
-    img{
+a.activeBox {
+    img {
+
         padding: 15px;
-        background: #EA736D;
+        background-color: #EA736D;
         border-radius: 8px;
     }
-    img:first-of-type{
+
+    img:first-of-type {
         display: none;
     }
+}
 
+.home {
+    top: 84px;
+}
+
+.sales {
+    top: 184px;
+}
+
+.notification {
+    top: 274px;
+}
+
+.user {
+    top: 364px;
+}
+
+.setting {
+    top: 454px;
 }

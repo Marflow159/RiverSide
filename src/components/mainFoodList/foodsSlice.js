@@ -14,7 +14,7 @@ export const fetchFoods = createAsyncThunk(
     'foods/fetchFoods',
     () => {
         const { request } = useHttp();
-        return request("http://localhost:3001/foods")
+        return request("https://riversite-bba63-default-rtdb.firebaseio.com/foods.json")
     }
 )   
 
@@ -33,6 +33,7 @@ const foodsSlice = createSlice({
             .addCase(fetchFoods.fulfilled, (state, action) => {
                 state.foodsLoadingStatus = 'idle';
                 foodsAdapter.setAll(state, action.payload);
+
                 state.mainFilteredFoods = action.payload;
             })
             .addCase(fetchFoods.rejected, state => { state.foodsLoadingStatus = 'error' })

@@ -5,6 +5,7 @@ import store from './store/store'
 import App from './components/app/App';
 
 import './styles/index.scss'
+import './styles/media.scss'
 
 const container = document.getElementById('root');
 

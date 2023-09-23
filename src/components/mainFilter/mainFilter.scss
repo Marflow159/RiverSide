@@ -10,6 +10,8 @@
 
     background: #252836;
 
+    position: relative;
+
     button {
         background: none;
         outline: none;
@@ -18,17 +20,16 @@
         padding-bottom: 15px;
     }
 
-    div {
-        position: relative;
 
-        span {
-            position: absolute;
-            top: 33px;
-            height: 4px;
-            background: #EA736D;
-            border-radius: 10px;
-        }
+
+    span {
+        position: absolute;
+        top: 58px;
+        height: 4px;
+        background: #EA736D;
+        border-radius: 10px;
     }
+
 
     button:hover {
         color: #EA736D;
@@ -46,23 +47,26 @@
     }
 }
 
-.hot-dishes{
+.hot-dishes {
     width: 83px;
-    right: 0;
+    left: 0;
     transition: 0.3s;
 }
-.cold-dishes{
+
+.cold-dishes {
     width: 89px;
-    right: -124px;
+    left: 117px;
     transition: 0.3s;
 }
-.soup-dishes{
+
+.soup-dishes {
     width: 40px;
-    right: -199px;
+    left: 241px;
     transition: 0.3s;
 }
-.desserts-dishes{
+
+.desserts-dishes {
     width: 67px;
-    right: -300px;
+    left: 316px;
     transition: 0.3s;
 }

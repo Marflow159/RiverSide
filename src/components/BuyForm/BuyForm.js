@@ -70,10 +70,6 @@ const BuyForm = () => {
                         .required(),
                     entrance: Yup.number()
                         .min(1),
-                    apartment: Yup.number()
-                        .min(1),
-                    note: Yup.string()
-                        .min(2)
                 })}
                 onSubmit={values => console.log(values)}>
 
@@ -95,7 +91,8 @@ const BuyForm = () => {
                                 name='phone'
                                 type='text'
                                 className={errors.phone && touched.phone ? `errorBorder` : `notErrorBorder`}
-                                required />
+                                required 
+                                />
                             <label htmlFor="phone">Phone number <span>*</span></label>
                         </div >
 
@@ -133,7 +130,6 @@ const BuyForm = () => {
 
                         <div className='formik__ordersDishes'>
                                 <OrderDishes />
-
                         </div>
 
                         <div className='formik__button'>

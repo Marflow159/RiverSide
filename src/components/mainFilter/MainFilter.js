@@ -6,15 +6,15 @@ import './mainFilter.scss'
 const MainFilter = () => {
     const dispatch = useDispatch();
     const { activeFilter } = useSelector(state => state.foods)
-    
-    const lineFilter = () =>{
-        if(activeFilter === 'HotDishes'){
+
+    const lineFilter = () => {
+        if (activeFilter === 'HotDishes') {
             return 'hot-dishes'
-        } else if(activeFilter === 'ColdDishes'){
+        } else if (activeFilter === 'ColdDishes') {
             return 'cold-dishes'
-        } else if(activeFilter === 'Soup'){
+        } else if (activeFilter === 'Soup') {
             return 'soup-dishes'
-        } else if(activeFilter === 'Desserts'){
+        } else if (activeFilter === 'Desserts') {
             return 'desserts-dishes'
         }
     }
@@ -22,9 +22,9 @@ const MainFilter = () => {
     return (
         <>
             <div className='mainFilter'>
+                <span  className={lineFilter()}></span>
                 <div className={activeFilter === 'HotDishes' ? 'activeFilters' : ''}>
                     <button onClick={() => dispatch(activeFoodsChanged(`HotDishes`))}>HotDishes</button>
-                    <span className={lineFilter()}></span>
                 </div>
                 <div className={activeFilter === 'ColdDishes' ? 'activeFilters' : ''}>
                     <button onClick={() => dispatch(activeFoodsChanged(`ColdDishes`))}>ColdDishes</button>
