@@ -29,7 +29,8 @@ const ordersSlice = createSlice({
             .addCase(fetchOrders.fulfilled, (state, action) => {
                 state.ordersLoadingStatus = 'idle';
                 ordersAdapter.setAll(state, action.payload);
-                state.allOrders = action.payload;
+                console.log(Object.values(action.payload));
+                state.allOrders = Object.values(action.payload);
             })
             .addCase(fetchOrders.rejected, state => { state.ordersLoadingStatus = 'error' })
             .addDefaultCase(() => { })

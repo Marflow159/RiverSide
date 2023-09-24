@@ -19,13 +19,13 @@ const NotificationOrders = () => {
         const arrSort = [...arr]
         const revArr = arrSort.reverse()
 
-        return revArr.map(({ id, menu, total, status }) => {
+        return revArr.map(({ id, menu, total, status }, i) => {
             return (
                 <div key={id} className='showOrders'>
-                    <p>Orders #{id}</p>
-                    <p>{menu}</p>
+                    <p>Orders #{arr.length - i}</p>
+                    <p>{menu[0].name}</p>
                     <p>${total}</p>
-                    <img src={status === `preparing` ? preparing : complited} alt="" />
+                    <p>{status === `preparing` ? `Preparing` : `Complited`}</p>
                 </div>
             )
         })
@@ -41,6 +41,7 @@ const NotificationOrders = () => {
         if (allOrders.length > 0) {
             element = ordersLoad(allOrders)
         } else if (allOrders.length === 0) {
+            console.log(allOrders);
             return <h4 className="not_found">Dishes not found</h4>
         }
     }

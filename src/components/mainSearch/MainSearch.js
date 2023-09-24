@@ -19,7 +19,8 @@ const MainSearch = () => {
             dispatch(filteredFoodsChanged(foods))
         } else {
             const food = items.filter(item => {
-                if (item.name.indexOf(term) > -1) {
+                
+                if (item.name.toLowerCase().indexOf(term.toLowerCase()) > -1) {
                     return item;
                 } else {
                     return null;
@@ -32,10 +33,6 @@ const MainSearch = () => {
     return (
         <div className="mainSearch">
             <div>
-                {/* <div className='mainSearch__h1'>
-                    <h1>Riverside</h1>
-                    <h1>Riverside</h1>
-                </div> */}
                 <div class="wrapper nine">
                     <div>
                         <h1 class="rotate">
