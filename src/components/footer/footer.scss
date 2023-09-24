@@ -1,9 +1,8 @@
-
-.burger{
+.burger {
     display: none;
 }
 
-.burgerHome{
+.burgerHome {
     display: none;
 }
 
@@ -30,6 +29,8 @@
 
         background: none;
 
+        position: relative;
+
         img {
             padding: 15px;
         }
@@ -45,4 +46,21 @@
             transition: 0.1s;
         }
     }
+}
+
+.orderCount {
+    width: 17px;
+    height: 17px;
+
+    position: absolute;
+    right:7px;
+    top: 10px;
+    background-color: #EA736D;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1;
 }

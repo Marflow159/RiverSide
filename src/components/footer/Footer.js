@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 import basket from '../resources/img/navImg/Cart.png'
 import logo from '../resources/img/navImg/logo.png'
 
 import './footer.scss'
 const Footer = () => {
+
+    const { orderDishes } = useSelector(state => state.foods);
 
     const swapFooter = () => {
         localStorage.setItem("footerOn", true)
@@ -44,7 +47,7 @@ const Footer = () => {
             <NavLink to='/' className="burgerHome">
                 <img src={logo} alt="" />
             </NavLink>
-            <button onClick={() => swapFooter()}><img src={basket} alt="basket" /></button>
+            <button onClick={() => swapFooter()}><img src={basket} alt="basket" /> <span className="orderCount">{orderDishes.length}</span></button>
         </footer>
     )
 }

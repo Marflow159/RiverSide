@@ -99,7 +99,7 @@ const OrderDishes = () => {
                         </div>
                         <div className='order__p '>
                             <p>{name.length > 20 ? name.slice(0, 20) + `...` : name}</p>
-                            <p>$ {(price * count).toFixed(2)}</p>
+                            <p>${(price * count).toFixed(2)}</p>
                             <div className='order__p__but'>
                                 <button type="button" onClick={e => minusPlus(id, `minus`)}>-</button>
                                 <p>{count}</p>

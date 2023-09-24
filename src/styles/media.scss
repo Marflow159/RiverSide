@@ -156,9 +156,10 @@
 
 
 @media(max-width: 424px) {
-    h2{
+    h2 {
         font-size: 20px;
     }
+
     .rotate {
         span {
             font-size: 24px;
@@ -168,7 +169,8 @@
     .mainSearch div:nth-of-type(2) {
         width: 150px;
         height: 40px;
-        input{
+
+        input {
             width: 100px;
         }
     }
@@ -199,5 +201,38 @@
     .desserts-dishes {
         width: 46px;
         left: 249px;
+    }
+
+    .formik label {
+        font-size: 13px;
+    }
+
+    .formik__button button {
+        width: 100px;
+    }
+
+    .order {
+
+        &__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+        }
+
+        &__p {
+            justify-content: space-between;
+
+            p:first-child {
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                /* number of lines to show */
+                line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
     }
 }

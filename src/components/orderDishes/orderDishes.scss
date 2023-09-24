@@ -1,25 +1,28 @@
-.notYet{
-        margin-top: 70px;
+.notYet {
+    margin-top: 70px;
 }
+
 .order {
     display: flex;
 
-    width: 90%;
+    width: 95%;
     height: 45px;
 
     column-gap: 10px;
     margin-top: 4px;
 
     position: relative;
-
-    
-    transition: all 0.3s ease;
     left: -500px;
 
-    &__left{
+    transition: all 0.3s ease;
+
+    align-items: center;
+    justify-content: center;
+
+    &__left {
         left: 0;
     }
-    
+
     &__img {
         width: 45px;
         height: 45px;
@@ -31,20 +34,13 @@
 
     &__p {
         display: flex;
-        width: 340px;
+        width: calc(100% - 50px);
         height: 100%;
 
         align-items: center;
-        column-gap: 10px;
+        justify-content: space-between;
 
-        p:first-child {
-            width: 175px;
-        }
-
-        p:nth-of-type(2) {
-            text-align: start;
-            width: 75px;
-        }
+        gap: 10px;
 
         &__but {
             display: flex;
@@ -52,13 +48,14 @@
             column-gap: 10px;
 
             button {
-                width: 20px;
-                height: 20px;
                 border: 1px solid #393C49;
                 border-radius: 8px;
             }
+
             p:nth-of-type(1) {
-                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 20px;
             }
         }
