@@ -11,7 +11,7 @@
 
     box-sizing: border-box;
 
-    padding: 25px 10px 25px 10px;
+    padding: 25px;
 
     &>div {
         width: 100%;
@@ -31,8 +31,18 @@
         p:nth-of-type(4) {
             width: 160px;
         }
-
     }
+
+    &__orders{
+        width: 100%;
+        height: calc(100vh - 290px);
+        overflow-y: scroll;
+    }
+}
+
+
+.notifOrders__orders::-webkit-scrollbar {
+    display: none;
 }
 
 .lineFull {
@@ -63,7 +73,7 @@
         color: #9b9da0;
     }
 
-    p:nth-of-type(4) {
+    .Preparing{
         width: fit-content;
 
         padding: 5px 45px;
@@ -73,6 +83,16 @@
         color: rgba(255, 179, 113, 1);
     }
 
+    .Complited{
+        width: fit-content;
+
+        padding: 5px 45px;
+        background-color: rgba(109,226,192,0.3);
+
+        border-radius: 30px;
+        color: rgba(81,209,170,1);
+    }
+    
     p {
         width: 25%;
     }

@@ -25,7 +25,7 @@ const NotificationOrders = () => {
                     <p>Orders #{arr.length - i}</p>
                     <p>{menu[0].name}</p>
                     <p>${total}</p>
-                    <p>{status === `preparing` ? `Preparing` : `Complited`}</p>
+                    <p className={status === `preparing` ? `Preparing` : `Complited`}>{status === `preparing` ? `Preparing` : `Complited`}</p>
                 </div>
             )
         })
@@ -49,7 +49,7 @@ const NotificationOrders = () => {
     return (
         <div className='notifOrders'>
             <div className='notifOrders__y'>
-                <h2>Your orders</h2>
+                <h2>All orders</h2>
             </div>
 
             <div className='notifOrders__filter'>
@@ -59,7 +59,11 @@ const NotificationOrders = () => {
                 <p>Status</p>
             </div>
             <span className='lineFull'></span>
-            {element}
+
+            <div className='notifOrders__orders'>
+                {element}
+            </div>
+
         </div>
     )
 }

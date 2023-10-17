@@ -62,12 +62,12 @@
     }
 
     &__margins {
-       
+
         position: relative;
         width: 45%;
         height: min-content;
 
-        &>input { 
+        &>input {
             box-sizing: border-box;
             width: 100%;
             color: white;
@@ -76,6 +76,9 @@
             border-radius: 4px;
             background-color: transparent;
             transition: outline-color 500ms;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: white;
         }
 
         input:focus {
@@ -191,7 +194,7 @@
             color: white;
         }
 
-        button:disabled{
+        button:disabled {
             border: 2px solid rgba(234, 115, 109, 0.5);
         }
     }

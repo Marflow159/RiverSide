@@ -17,7 +17,7 @@ import './header.scss'
 
 const Header = () => {
 
-    const [navigate, setNavigate ] = useState()
+    const [navigate, setNavigate ] = useState('home')
 
     const swapNav = (isActive, name) => {
         if(isActive){
@@ -27,7 +27,6 @@ const Header = () => {
             return 'noActiveBox'
         }
     }
-
 
     return (
         <header className="header">

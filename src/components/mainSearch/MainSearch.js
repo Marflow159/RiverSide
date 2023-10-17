@@ -33,9 +33,9 @@ const MainSearch = () => {
     return (
         <div className="mainSearch">
             <div>
-                <div class="wrapper nine">
+                <div className="wrapper nine">
                     <div>
-                        <h1 class="rotate">
+                        <h1 className="rotate">
                             <span>R</span>
                             <span>I</span>
                             <span>V</span>

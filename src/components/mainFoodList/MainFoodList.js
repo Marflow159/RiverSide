@@ -70,9 +70,11 @@ const MainFoodList = () => {
     }
 
     const renderFoodsList = (arr) => {
-        return arr.map(({ id, ...props }) => {
+        return arr.map((item, i) => {
+            const { id, ...props } = item
+            // console.log(i);
             return (
-                <MainFoodListItem onAddToOrder={() => onAddToOrder(id, props)} key={id} {...props} />
+                <MainFoodListItem onAddToOrder={() => onAddToOrder(id, props)} key={id} {...props} i={i}  />
             )
         })
     }

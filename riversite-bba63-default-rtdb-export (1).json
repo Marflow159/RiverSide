@@ -1,0 +1,347 @@
+{
+  "filters": [
+    {
+      "id": "HotDishes",
+      "label": "Hot Dishes",
+      "name": "HotDishes"
+    },
+    {
+      "id": "ColdDishes",
+      "label": "Cold Dishes",
+      "name": "ColdDishes"
+    },
+    {
+      "id": "Soup",
+      "label": "Soup",
+      "name": "Soup"
+    },
+    {
+      "id": "Dessert",
+      "label": "Dessert",
+      "name": "Dessert"
+    }
+  ],
+  "foods": [
+    {
+      "count": 1,
+      "id": "spicySea",
+      "img": "image/hotDishes/spicySea.png",
+      "name": "Spicy Seasoned Seafood Noodles",
+      "price": "2.29",
+      "type": "HotDishes"
+    },
+    {
+      "count": 1,
+      "id": "saltedPasta",
+      "img": "image/hotDishes/saltedPasta.png",
+      "name": "Salted Pasta With Mushroom Sauce",
+      "price": "2.69",
+      "type": "HotDishes"
+    },
+    {
+      "count": 1,
+      "id": "beefDump",
+      "img": "image/hotDishes/beefDump.png",
+      "name": "Beef Dumpling In Hot And Sour Soup",
+      "price": "2.99",
+      "type": "HotDishes"
+    },
+    {
+      "count": 1,
+      "id": "healthyNoob",
+      "img": "image/hotDishes/healthyNood.png",
+      "name": "Healthy Noodle With Spinach Leaf",
+      "price": "3.29",
+      "type": "HotDishes"
+    },
+    {
+      "count": 1,
+      "id": "spicyInst",
+      "img": "image/hotDishes/spicyInst.png",
+      "name": "Spicy Instant Moodle With Special Omelette",
+      "price": "3.59",
+      "type": "HotDishes"
+    },
+    {
+      "count": 1,
+      "id": "aranGoyo",
+      "img": "image/coldDishes/aranGoyo.png",
+      "name": "Aran Goyoagas Niçoise Salad",
+      "price": "3.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "coldLemon",
+      "img": "image/coldDishes/coldLemon.png",
+      "name": "Cold Lemon Zoodles",
+      "price": "2.59",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "coldSesame",
+      "img": "image/coldDishes/coldSesame.png",
+      "name": "Cold Sesame Cucumber Noodles",
+      "price": "2.59",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "yellowTomato",
+      "img": "image/coldDishes/yellowTomato.png",
+      "name": "Yellow Tomato Gazpacho",
+      "price": "3.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "honeyMiso",
+      "img": "image/coldDishes/honeyMiso.png",
+      "name": "Honey-miso Summer Salad Bowls",
+      "price": "2.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "kelp",
+      "img": "image/coldDishes/kelp.png",
+      "name": "Kelp And Zucchini Noodle Pad Thai",
+      "price": "3.59",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "quinoaAndShaved",
+      "img": "image/coldDishes/quinoaAndShaved.png",
+      "name": "Quinoa And Shaved Carrot Salad",
+      "price": "2.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "shreddedThai",
+      "img": "image/coldDishes/shreddedThai.png",
+      "name": "Shredded Thai Salad With Avocado",
+      "price": "3.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "sobaNoodle",
+      "img": "image/coldDishes/sobaNoodle.png",
+      "name": "Soba Noodle Salad With Strawberries",
+      "price": "2.59",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "spiralizedSushi",
+      "img": "image/coldDishes/spiralizedSushi.png",
+      "name": "Spiralized Sushi Bowl",
+      "price": "2.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "theUltimate",
+      "img": "image/coldDishes/theUltimate.png",
+      "name": "The Ultimate Quinoa-avocado Bowl",
+      "price": "2.29",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/coldDishes/watermelonPoke.png",
+      "name": "Watermelon Poke Bowls",
+      "price": "3.59",
+      "type": "ColdDishes"
+    },
+    {
+      "count": 1,
+      "id": "Dark & white",
+      "img": "image/desserts/dark.png",
+      "name": "Dark & white chocolate cardamom swirl tart",
+      "price": "1.79",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/strawberry.png",
+      "name": "Strawberry tart with lavender & honey cream",
+      "price": "2.19",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/next.png",
+      "name": "Lime pie",
+      "price": "0.99",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/coconut.png",
+      "name": "Coconut custard tart with roasted pineapple",
+      "price": "2.19",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/roasted.png",
+      "name": "Roasted vanilla & honey crème brûlée",
+      "price": "1.79",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/choc.png",
+      "name": "Chocolate cheesecake",
+      "price": "1.79",
+      "type": "Dessert"
+    },
+    {
+      "count": 1,
+      "id": "watermelonPoke",
+      "img": "image/desserts/bakewell.png",
+      "name": "Bakewell tart",
+      "price": "1.49",
+      "type": "Dessert"
+    }
+  ],
+  "orders": {
+    "-Nf7fKX0bxzcbMT4fVTj": {
+      "address": "Хімічна",
+      "house": "12",
+      "id": "ff199041-6ed1-4765-ba48-bd0c49beb7f3",
+      "menu": [
+        {
+          "count": 1,
+          "id": "saltedPasta",
+          "img": "image/hotDishes/saltedPasta.png",
+          "name": "Salted Pasta With Mushroom Sauce",
+          "price": "2.69",
+          "type": "HotDishes"
+        },
+        {
+          "count": 1,
+          "id": "coldSesame",
+          "img": "image/coldDishes/coldSesame.png",
+          "name": "Cold Sesame Cucumber Noodles",
+          "price": "2.59",
+          "type": "ColdDishes"
+        }
+      ],
+      "name": "Влад",
+      "phone": "0673410040",
+      "status": "complited",
+      "total": "5.28"
+    },
+    "-Nf7gwMQIO5LJhSNnV9R": {
+      "address": "Селівчка",
+      "house": "1",
+      "id": "426ba77a-8736-4051-a84f-dbaa3c999eb8",
+      "menu": [
+        {
+          "count": 1,
+          "id": "spicyInst",
+          "img": "image/hotDishes/spicyInst.png",
+          "name": "Spicy Instant Moodle With Special Omelette",
+          "price": "3.59",
+          "type": "HotDishes"
+        }
+      ],
+      "name": "Назар",
+      "phone": "0678371169",
+      "status": "complited",
+      "total": "3.59"
+    },
+    "-Nf7nNP1FNSORBrOH9C_": {
+      "address": "adad",
+      "house": "13",
+      "id": "995f7081-55d1-4671-aafb-bc82e885a490",
+      "menu": [
+        {
+          "count": 1,
+          "id": "honeyMiso",
+          "img": "image/coldDishes/honeyMiso.png",
+          "name": "Honey-miso Summer Salad Bowls",
+          "price": "2.29",
+          "type": "ColdDishes"
+        }
+      ],
+      "name": "marflow159",
+      "phone": "1231313131",
+      "status": "preparing",
+      "total": "2.29"
+    },
+    "-Nf7qZYuJ5bhf7ezrwpp": {
+      "address": "Шевченка",
+      "house": "12",
+      "id": "57ceedeb-1476-4592-98a2-7515cb7a2eed",
+      "menu": [
+        {
+          "count": 1,
+          "id": "healthyNoob",
+          "img": "image/hotDishes/healthyNood.png",
+          "name": "Healthy Noodle With Spinach Leaf",
+          "price": "3.29",
+          "type": "HotDishes"
+        }
+      ],
+      "name": "Олег",
+      "phone": "38067431331",
+      "status": "preparing",
+      "total": "3.29"
+    },
+    "-Nf7u3zcuVEpkXNcPLfl": {
+      "address": "Хімічна",
+      "house": "12",
+      "id": "b026a078-b923-4b63-9eb5-f22eb2f70952",
+      "menu": [
+        {
+          "count": 2,
+          "id": "watermelonPoke",
+          "img": "image/coldDishes/watermelonPoke.png",
+          "name": "Watermelon Poke Bowls",
+          "price": "3.59",
+          "type": "ColdDishes"
+        },
+        {
+          "count": 2,
+          "id": "theUltimate",
+          "img": "image/coldDishes/theUltimate.png",
+          "name": "The Ultimate Quinoa-avocado Bowl",
+          "price": "2.29",
+          "type": "ColdDishes"
+        },
+        {
+          "count": 2,
+          "id": "spicyInst",
+          "img": "image/hotDishes/spicyInst.png",
+          "name": "Spicy Instant Moodle With Special Omelette",
+          "price": "3.59",
+          "type": "HotDishes"
+        },
+        {
+          "count": 2,
+          "id": "beefDump",
+          "img": "image/hotDishes/beefDump.png",
+          "name": "Beef Dumpling In Hot And Sour Soup",
+          "price": "2.99",
+          "type": "HotDishes"
+        }
+      ],
+      "name": "Хрю",
+      "phone": "380967769584",
+      "status": "preparing",
+      "total": "24.92"
+    }
+  }
+}
