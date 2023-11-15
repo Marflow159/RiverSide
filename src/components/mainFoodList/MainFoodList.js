@@ -43,7 +43,7 @@ const MainFoodList = () => {
             localStorage.setItem('allOrders', JSON.stringify(allOrders))
             dispatch(orderDishesChanged(newOrders))
         } else {
-            orderDishes.map((item, i) => {
+            orderDishes.forEach((item, i) => {
                 const { id, count, ...props } = item
                 if (id === addId) {
                     newOrders.push({
@@ -72,7 +72,6 @@ const MainFoodList = () => {
     const renderFoodsList = (arr) => {
         return arr.map((item, i) => {
             const { id, ...props } = item
-            // console.log(i);
             return (
                 <MainFoodListItem onAddToOrder={() => onAddToOrder(id, props)} key={id} {...props} i={i}  />
             )
@@ -89,7 +88,7 @@ const MainFoodList = () => {
         if (filteredFoods.length > 0) {
             element = renderFoodsList(filteredFoods)
         } else if (filteredFoods.length === 0) {
-            return <h4 className="not_found">Dishes not found</h4>
+            return <h2 className="not_found">Dishes not found</h2>
         }
     }
 

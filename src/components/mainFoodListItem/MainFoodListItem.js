@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import './mainFoodListItem.scss'
 
@@ -7,7 +7,8 @@ const MainFoodListItem = ({ onAddToOrder, name, price, img, i }) => {
 
     let firstDelay = 0.22 + (i * 0.06);
     let secondDelay = 0.38 + (i * 0.06);
-    setTimeout(() => setActiveClazz('foodListItem acttive'),100)
+    console.log(activeClazz);
+    setTimeout(() => setActiveClazz('foodListItem acttive'), 100)
 
     return (
         <div className={activeClazz} style={{ transitionDelay: `${firstDelay}s, ${secondDelay}s, 0s` }}>

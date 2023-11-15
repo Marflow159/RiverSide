@@ -8,6 +8,7 @@
     position: relative;
 
     bottom: 0;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,8 +63,6 @@
 
         border: 2px solid #EA736D;
         color: #EA736D;
-        // border-color: #EA736D;
-        // box-shadow: 0 0 40px 40px #EA736D inset, 0 0 0 0 #EA736D;
     }
 
     button:hover {

@@ -1,15 +1,14 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOrders } from './ordersSlice';
 
-import preparing from '../resources/img/orders/preparing.png'
-import complited from '../resources/img/orders/complited.png'
-
+import NotificationOrderItem from './NotificationOrderItem';
 import './notificationOrders.scss'
 
 const NotificationOrders = () => {
     const { allOrders, ordersLoadingStatus } = useSelector(state => state.orders)
     const dispatch = useDispatch();
+    
 
     useEffect(() => {
         dispatch(fetchOrders())
@@ -19,14 +18,11 @@ const NotificationOrders = () => {
         const arrSort = [...arr]
         const revArr = arrSort.reverse()
 
-        return revArr.map(({ id, menu, total, status }, i) => {
-            return (
-                <div key={id} className='showOrders'>
-                    <p>Orders #{arr.length - i}</p>
-                    <p>{menu[0].name}</p>
-                    <p>${total}</p>
-                    <p className={status === `preparing` ? `Preparing` : `Complited`}>{status === `preparing` ? `Preparing` : `Complited`}</p>
-                </div>
+
+        return revArr.map((item, i) => {
+            const {id, ...props} = item
+            return(
+                <NotificationOrderItem key={id} {...props} i={i} arr={arr}/>
             )
         })
     }
@@ -41,7 +37,6 @@ const NotificationOrders = () => {
         if (allOrders.length > 0) {
             element = ordersLoad(allOrders)
         } else if (allOrders.length === 0) {
-            console.log(allOrders);
             return <h4 className="not_found">Dishes not found</h4>
         }
     }
